@@ -1,0 +1,28 @@
+# iSEE on MOVi-C (no walker).
+model:
+  num_slots: 11
+  input_size: 336            # 256 x 256 frames resized to 336 x 336: 24 x 24 patches
+  checkpoint: checkpoints/isee_movi_c.safetensors
+ten:
+  tau: 0.5
+  rho: 0.9
+  release: topk
+  window_dilation: 5
+training:
+  data: {dataset: movi_c, root: data/movi_c, chunk: 4}
+  batch_size: 64
+  workers: 16
+  steps: 100000
+  lr: 4.0e-4
+  warmup: 2500
+  grad_clip: 0.05
+  precision: fp32
+  checkpoint_every: 2500
+  log_every: 250
+  seed: 20260826
+  validation: {every: 2500, clips: 64, batch_size: 4}
+evaluation:
+  data: data/movi_c          # validation/<index>.npz
+  batch_clips: 4
+  preprocess_device: cpu     # where frames are resized (isee/data/video.py, preprocess)
+  tf32: false

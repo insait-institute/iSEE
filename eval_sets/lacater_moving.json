@@ -1,0 +1,3453 @@
+{
+ "camera": "moving",
+ "split": "test",
+ "description": "Occlusions of the snitch in the first 1200 test clips (sorted by name), moving camera. An occlusion is a run of frames [start, end) on which the snitch is not visible (visibility_rate_gt_0.txt of the dataset), at least 5 frames long, starting at frame 16 or later and ending at least 3 frames before the end of the clip, and preceded by 3 frames on which the snitch covers at least 20 pixels of the rendered modal mask. `kind` is carried if at least 5 of its frames are in containment_with_move_annotations.txt, else contained if at least as many frames are contained as occluded, else occluded; `motion` is moved if the snitch's amodal box centre moves at least 10 px from its position at `start` during the occlusion. Every moved occlusion is kept; 50 static ones are drawn at random (seed 0) in proportion to the static occlusions of each kind and length (5-9, 10-29, 30+ frames).",
+ "sha256": "6cdb0bc784973a598aa8e08e4416e4e0d0630e68c2f9bd4f746331937dee53c0",
+ "n_cases": 388,
+ "clips": [
+  "CLEVR_new_000004",
+  "CLEVR_new_000057",
+  "CLEVR_new_000058",
+  "CLEVR_new_000158",
+  "CLEVR_new_000171",
+  "CLEVR_new_000232",
+  "CLEVR_new_000241",
+  "CLEVR_new_000259",
+  "CLEVR_new_000492",
+  "CLEVR_new_000532",
+  "CLEVR_new_000581",
+  "CLEVR_new_000629",
+  "CLEVR_new_000671",
+  "CLEVR_new_000746",
+  "CLEVR_new_000759",
+  "CLEVR_new_000874",
+  "CLEVR_new_000891",
+  "CLEVR_new_000899",
+  "CLEVR_new_000924",
+  "CLEVR_new_000939",
+  "CLEVR_new_000961",
+  "CLEVR_new_000992",
+  "CLEVR_new_001025",
+  "CLEVR_new_001044",
+  "CLEVR_new_001118",
+  "CLEVR_new_001176",
+  "CLEVR_new_001189",
+  "CLEVR_new_001204",
+  "CLEVR_new_001210",
+  "CLEVR_new_001220",
+  "CLEVR_new_001234",
+  "CLEVR_new_001240",
+  "CLEVR_new_001251",
+  "CLEVR_new_001274",
+  "CLEVR_new_001310",
+  "CLEVR_new_001360",
+  "CLEVR_new_001399",
+  "CLEVR_new_001404",
+  "CLEVR_new_001421",
+  "CLEVR_new_001454",
+  "CLEVR_new_001496",
+  "CLEVR_new_001498",
+  "CLEVR_new_001499",
+  "CLEVR_new_001502",
+  "CLEVR_new_001591",
+  "CLEVR_new_001602",
+  "CLEVR_new_001680",
+  "CLEVR_new_001697",
+  "CLEVR_new_001699",
+  "CLEVR_new_001742",
+  "CLEVR_new_001784",
+  "CLEVR_new_001807",
+  "CLEVR_new_001951",
+  "CLEVR_new_001956",
+  "CLEVR_new_002008",
+  "CLEVR_new_002010",
+  "CLEVR_new_002074",
+  "CLEVR_new_002083",
+  "CLEVR_new_002137",
+  "CLEVR_new_002161",
+  "CLEVR_new_002226",
+  "CLEVR_new_002240",
+  "CLEVR_new_002318",
+  "CLEVR_new_002426",
+  "CLEVR_new_002440",
+  "CLEVR_new_002482",
+  "CLEVR_new_002910",
+  "CLEVR_new_002912",
+  "CLEVR_new_002920",
+  "CLEVR_new_003015",
+  "CLEVR_new_003022",
+  "CLEVR_new_003044",
+  "CLEVR_new_003053",
+  "CLEVR_new_003145",
+  "CLEVR_new_003155",
+  "CLEVR_new_003188",
+  "CLEVR_new_003217",
+  "CLEVR_new_003292",
+  "CLEVR_new_003324",
+  "CLEVR_new_003394",
+  "CLEVR_new_003417",
+  "CLEVR_new_003434",
+  "CLEVR_new_003450",
+  "CLEVR_new_003468",
+  "CLEVR_new_003472",
+  "CLEVR_new_003476",
+  "CLEVR_new_003481",
+  "CLEVR_new_003511",
+  "CLEVR_new_003535",
+  "CLEVR_new_003552",
+  "CLEVR_new_003582",
+  "CLEVR_new_003652",
+  "CLEVR_new_003738",
+  "CLEVR_new_003758",
+  "CLEVR_new_003891",
+  "CLEVR_new_003947",
+  "CLEVR_new_003964",
+  "CLEVR_new_003973",
+  "CLEVR_new_004007",
+  "CLEVR_new_004015",
+  "CLEVR_new_004063",
+  "CLEVR_new_004092",
+  "CLEVR_new_004112",
+  "CLEVR_new_004134",
+  "CLEVR_new_004138",
+  "CLEVR_new_004264",
+  "CLEVR_new_004303",
+  "CLEVR_new_004325",
+  "CLEVR_new_004332",
+  "CLEVR_new_004390",
+  "CLEVR_new_004511",
+  "CLEVR_new_004526",
+  "CLEVR_new_004544",
+  "CLEVR_new_004590",
+  "CLEVR_new_004605",
+  "CLEVR_new_004717",
+  "CLEVR_new_004791",
+  "CLEVR_new_004911",
+  "CLEVR_new_004918",
+  "CLEVR_new_004951",
+  "CLEVR_new_004958",
+  "CLEVR_new_004961",
+  "CLEVR_new_005000",
+  "CLEVR_new_005001",
+  "CLEVR_new_005040",
+  "CLEVR_new_005077",
+  "CLEVR_new_005101",
+  "CLEVR_new_005121",
+  "CLEVR_new_005128",
+  "CLEVR_new_005141",
+  "CLEVR_new_005162",
+  "CLEVR_new_005181",
+  "CLEVR_new_005182",
+  "CLEVR_new_005254",
+  "CLEVR_new_005309",
+  "CLEVR_new_005311",
+  "CLEVR_new_005357",
+  "CLEVR_new_005399",
+  "CLEVR_new_005422",
+  "CLEVR_new_005484",
+  "CLEVR_new_005608",
+  "CLEVR_new_005612",
+  "CLEVR_new_005670",
+  "CLEVR_new_005689",
+  "CLEVR_new_005690",
+  "CLEVR_new_005849",
+  "CLEVR_new_005867",
+  "CLEVR_new_005952",
+  "CLEVR_new_005996",
+  "CLEVR_new_006026",
+  "CLEVR_new_006059",
+  "CLEVR_new_006090",
+  "CLEVR_new_006165",
+  "CLEVR_new_006174",
+  "CLEVR_new_006201",
+  "CLEVR_new_006223",
+  "CLEVR_new_006243",
+  "CLEVR_new_006288",
+  "CLEVR_new_006389",
+  "CLEVR_new_006390",
+  "CLEVR_new_006408",
+  "CLEVR_new_006416",
+  "CLEVR_new_006449",
+  "CLEVR_new_006469",
+  "CLEVR_new_006486",
+  "CLEVR_new_006496",
+  "CLEVR_new_006501",
+  "CLEVR_new_006528",
+  "CLEVR_new_006545",
+  "CLEVR_new_006608",
+  "CLEVR_new_006710",
+  "CLEVR_new_006711",
+  "CLEVR_new_006909",
+  "CLEVR_new_006994",
+  "CLEVR_new_007000",
+  "CLEVR_new_007013",
+  "CLEVR_new_007028",
+  "CLEVR_new_007035",
+  "CLEVR_new_007065",
+  "CLEVR_new_007067",
+  "CLEVR_new_007078",
+  "CLEVR_new_007130",
+  "CLEVR_new_007147",
+  "CLEVR_new_007200",
+  "CLEVR_new_007303",
+  "CLEVR_new_007320",
+  "CLEVR_new_007365",
+  "CLEVR_new_007473",
+  "CLEVR_new_007557",
+  "CLEVR_new_007610",
+  "CLEVR_new_007612",
+  "CLEVR_new_007638",
+  "CLEVR_new_007658",
+  "CLEVR_new_007660",
+  "CLEVR_new_007695",
+  "CLEVR_new_007699",
+  "CLEVR_new_007728",
+  "CLEVR_new_007751",
+  "CLEVR_new_007802",
+  "CLEVR_new_007816",
+  "CLEVR_new_007877",
+  "CLEVR_new_007902",
+  "CLEVR_new_007920",
+  "CLEVR_new_007934",
+  "CLEVR_new_007937",
+  "CLEVR_new_007956",
+  "CLEVR_new_007996",
+  "CLEVR_new_008010",
+  "CLEVR_new_008017",
+  "CLEVR_new_008018",
+  "CLEVR_new_008036",
+  "CLEVR_new_008089",
+  "CLEVR_new_008120",
+  "CLEVR_new_008186",
+  "CLEVR_new_008228",
+  "CLEVR_new_008288",
+  "CLEVR_new_008294",
+  "CLEVR_new_008401",
+  "CLEVR_new_008441",
+  "CLEVR_new_008482",
+  "CLEVR_new_008498",
+  "CLEVR_new_008518",
+  "CLEVR_new_008535",
+  "CLEVR_new_008545",
+  "CLEVR_new_008548",
+  "CLEVR_new_008568",
+  "CLEVR_new_008569",
+  "CLEVR_new_008573",
+  "CLEVR_new_008716",
+  "CLEVR_new_008736",
+  "CLEVR_new_008767",
+  "CLEVR_new_008771",
+  "CLEVR_new_008786",
+  "CLEVR_new_008823",
+  "CLEVR_new_008842",
+  "CLEVR_new_008853",
+  "CLEVR_new_008861",
+  "CLEVR_new_008964",
+  "CLEVR_new_009015",
+  "CLEVR_new_009088",
+  "CLEVR_new_009112",
+  "CLEVR_new_009172",
+  "CLEVR_new_009185",
+  "CLEVR_new_009234",
+  "CLEVR_new_009260",
+  "CLEVR_new_009304",
+  "CLEVR_new_009364",
+  "CLEVR_new_009390",
+  "CLEVR_new_009400",
+  "CLEVR_new_009448",
+  "CLEVR_new_009544",
+  "CLEVR_new_009584",
+  "CLEVR_new_009636",
+  "CLEVR_new_009728",
+  "CLEVR_new_009775",
+  "CLEVR_new_009780",
+  "CLEVR_new_009788",
+  "CLEVR_new_009803",
+  "CLEVR_new_009816",
+  "CLEVR_new_009843",
+  "CLEVR_new_009860",
+  "CLEVR_new_009864",
+  "CLEVR_new_009866",
+  "CLEVR_new_009871",
+  "CLEVR_new_009885",
+  "CLEVR_new_009894",
+  "CLEVR_new_009925",
+  "CLEVR_new_009941",
+  "CLEVR_new_009966",
+  "CLEVR_new_009982",
+  "CLEVR_new_010040",
+  "CLEVR_new_010101",
+  "CLEVR_new_010148",
+  "CLEVR_new_010176",
+  "CLEVR_new_010290",
+  "CLEVR_new_010312",
+  "CLEVR_new_010327",
+  "CLEVR_new_010336",
+  "CLEVR_new_010338",
+  "CLEVR_new_010413",
+  "CLEVR_new_010442",
+  "CLEVR_new_010504",
+  "CLEVR_new_010533",
+  "CLEVR_new_010597",
+  "CLEVR_new_010655",
+  "CLEVR_new_010723",
+  "CLEVR_new_010725",
+  "CLEVR_new_010729",
+  "CLEVR_new_010760",
+  "CLEVR_new_010770",
+  "CLEVR_new_010860",
+  "CLEVR_new_010990",
+  "CLEVR_new_010999",
+  "CLEVR_new_011013",
+  "CLEVR_new_011109",
+  "CLEVR_new_011118",
+  "CLEVR_new_011127",
+  "CLEVR_new_011168",
+  "CLEVR_new_011302",
+  "CLEVR_new_011304",
+  "CLEVR_new_011371",
+  "CLEVR_new_011389",
+  "CLEVR_new_011670",
+  "CLEVR_new_011696",
+  "CLEVR_new_011716",
+  "CLEVR_new_011721",
+  "CLEVR_new_011744",
+  "CLEVR_new_011757",
+  "CLEVR_new_011832",
+  "CLEVR_new_011844",
+  "CLEVR_new_011886",
+  "CLEVR_new_011892",
+  "CLEVR_new_011896",
+  "CLEVR_new_011919",
+  "CLEVR_new_011923",
+  "CLEVR_new_011932",
+  "CLEVR_new_011947",
+  "CLEVR_new_012006",
+  "CLEVR_new_012012",
+  "CLEVR_new_012026",
+  "CLEVR_new_012032",
+  "CLEVR_new_012044",
+  "CLEVR_new_012079",
+  "CLEVR_new_012135",
+  "CLEVR_new_012143",
+  "CLEVR_new_012180",
+  "CLEVR_new_012212",
+  "CLEVR_new_012223",
+  "CLEVR_new_012239",
+  "CLEVR_new_012257",
+  "CLEVR_new_012273",
+  "CLEVR_new_012298",
+  "CLEVR_new_012346",
+  "CLEVR_new_012382",
+  "CLEVR_new_012527",
+  "CLEVR_new_012555",
+  "CLEVR_new_012562",
+  "CLEVR_new_012635"
+ ],
+ "cases": [
+  {
+   "clip": "CLEVR_new_000004",
+   "start": 43,
+   "end": 51,
+   "kind": "occluded",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000057",
+   "start": 27,
+   "end": 40,
+   "kind": "contained",
+   "length": 13,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000058",
+   "start": 161,
+   "end": 173,
+   "kind": "contained",
+   "length": 12,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_000158",
+   "start": 60,
+   "end": 207,
+   "kind": "contained",
+   "length": 147,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000171",
+   "start": 23,
+   "end": 105,
+   "kind": "carried",
+   "length": 82,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000232",
+   "start": 23,
+   "end": 140,
+   "kind": "contained",
+   "length": 117,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000241",
+   "start": 16,
+   "end": 27,
+   "kind": "occluded",
+   "length": 11,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_000259",
+   "start": 90,
+   "end": 178,
+   "kind": "contained",
+   "length": 88,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000492",
+   "start": 122,
+   "end": 132,
+   "kind": "contained",
+   "length": 10,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_000532",
+   "start": 158,
+   "end": 238,
+   "kind": "contained",
+   "length": 80,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000581",
+   "start": 97,
+   "end": 106,
+   "kind": "contained",
+   "length": 9,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000629",
+   "start": 258,
+   "end": 267,
+   "kind": "occluded",
+   "length": 9,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000671",
+   "start": 26,
+   "end": 108,
+   "kind": "contained",
+   "length": 82,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000746",
+   "start": 29,
+   "end": 65,
+   "kind": "contained",
+   "length": 36,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000759",
+   "start": 41,
+   "end": 51,
+   "kind": "occluded",
+   "length": 10,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_000874",
+   "start": 101,
+   "end": 259,
+   "kind": "carried",
+   "length": 158,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000891",
+   "start": 257,
+   "end": 271,
+   "kind": "contained",
+   "length": 14,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000899",
+   "start": 27,
+   "end": 69,
+   "kind": "contained",
+   "length": 42,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000924",
+   "start": 102,
+   "end": 108,
+   "kind": "contained",
+   "length": 6,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000939",
+   "start": 32,
+   "end": 137,
+   "kind": "contained",
+   "length": 105,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000961",
+   "start": 96,
+   "end": 107,
+   "kind": "contained",
+   "length": 11,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_000992",
+   "start": 66,
+   "end": 247,
+   "kind": "carried",
+   "length": 181,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001025",
+   "start": 64,
+   "end": 255,
+   "kind": "contained",
+   "length": 191,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001044",
+   "start": 17,
+   "end": 24,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001044",
+   "start": 94,
+   "end": 243,
+   "kind": "contained",
+   "length": 149,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001118",
+   "start": 147,
+   "end": 152,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001118",
+   "start": 158,
+   "end": 168,
+   "kind": "occluded",
+   "length": 10,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001118",
+   "start": 193,
+   "end": 202,
+   "kind": "occluded",
+   "length": 9,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001176",
+   "start": 186,
+   "end": 197,
+   "kind": "contained",
+   "length": 11,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001189",
+   "start": 23,
+   "end": 243,
+   "kind": "contained",
+   "length": 220,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001204",
+   "start": 26,
+   "end": 98,
+   "kind": "contained",
+   "length": 72,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001210",
+   "start": 171,
+   "end": 191,
+   "kind": "occluded",
+   "length": 20,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001220",
+   "start": 31,
+   "end": 73,
+   "kind": "contained",
+   "length": 42,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001234",
+   "start": 33,
+   "end": 45,
+   "kind": "contained",
+   "length": 12,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001234",
+   "start": 84,
+   "end": 97,
+   "kind": "occluded",
+   "length": 13,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_001240",
+   "start": 60,
+   "end": 153,
+   "kind": "carried",
+   "length": 93,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001251",
+   "start": 26,
+   "end": 38,
+   "kind": "contained",
+   "length": 12,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_001274",
+   "start": 57,
+   "end": 181,
+   "kind": "contained",
+   "length": 124,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001310",
+   "start": 103,
+   "end": 144,
+   "kind": "contained",
+   "length": 41,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001360",
+   "start": 131,
+   "end": 138,
+   "kind": "contained",
+   "length": 7,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001399",
+   "start": 35,
+   "end": 42,
+   "kind": "contained",
+   "length": 7,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001404",
+   "start": 130,
+   "end": 136,
+   "kind": "contained",
+   "length": 6,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_001421",
+   "start": 71,
+   "end": 116,
+   "kind": "contained",
+   "length": 45,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001454",
+   "start": 68,
+   "end": 112,
+   "kind": "contained",
+   "length": 44,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001496",
+   "start": 101,
+   "end": 223,
+   "kind": "carried",
+   "length": 122,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001498",
+   "start": 101,
+   "end": 223,
+   "kind": "carried",
+   "length": 122,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001499",
+   "start": 55,
+   "end": 227,
+   "kind": "carried",
+   "length": 172,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001502",
+   "start": 193,
+   "end": 245,
+   "kind": "contained",
+   "length": 52,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001591",
+   "start": 204,
+   "end": 248,
+   "kind": "carried",
+   "length": 44,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001602",
+   "start": 66,
+   "end": 206,
+   "kind": "carried",
+   "length": 140,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001680",
+   "start": 83,
+   "end": 104,
+   "kind": "contained",
+   "length": 21,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001697",
+   "start": 31,
+   "end": 135,
+   "kind": "contained",
+   "length": 104,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001699",
+   "start": 61,
+   "end": 143,
+   "kind": "carried",
+   "length": 82,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001742",
+   "start": 80,
+   "end": 85,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001784",
+   "start": 44,
+   "end": 54,
+   "kind": "occluded",
+   "length": 10,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001807",
+   "start": 59,
+   "end": 263,
+   "kind": "carried",
+   "length": 204,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001951",
+   "start": 93,
+   "end": 209,
+   "kind": "contained",
+   "length": 116,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_001956",
+   "start": 26,
+   "end": 180,
+   "kind": "carried",
+   "length": 154,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002008",
+   "start": 56,
+   "end": 107,
+   "kind": "carried",
+   "length": 51,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002008",
+   "start": 199,
+   "end": 214,
+   "kind": "contained",
+   "length": 15,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002010",
+   "start": 187,
+   "end": 192,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002074",
+   "start": 181,
+   "end": 225,
+   "kind": "occluded",
+   "length": 44,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002083",
+   "start": 64,
+   "end": 113,
+   "kind": "carried",
+   "length": 49,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002137",
+   "start": 30,
+   "end": 206,
+   "kind": "carried",
+   "length": 176,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002161",
+   "start": 96,
+   "end": 146,
+   "kind": "contained",
+   "length": 50,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002226",
+   "start": 160,
+   "end": 165,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002240",
+   "start": 103,
+   "end": 208,
+   "kind": "carried",
+   "length": 105,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002318",
+   "start": 139,
+   "end": 160,
+   "kind": "occluded",
+   "length": 21,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002426",
+   "start": 257,
+   "end": 268,
+   "kind": "contained",
+   "length": 11,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002440",
+   "start": 38,
+   "end": 45,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_002482",
+   "start": 190,
+   "end": 272,
+   "kind": "contained",
+   "length": 82,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002910",
+   "start": 28,
+   "end": 107,
+   "kind": "contained",
+   "length": 79,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002912",
+   "start": 28,
+   "end": 107,
+   "kind": "contained",
+   "length": 79,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002920",
+   "start": 62,
+   "end": 107,
+   "kind": "contained",
+   "length": 45,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002920",
+   "start": 168,
+   "end": 205,
+   "kind": "carried",
+   "length": 37,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002920",
+   "start": 224,
+   "end": 234,
+   "kind": "occluded",
+   "length": 10,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_002920",
+   "start": 247,
+   "end": 252,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003015",
+   "start": 67,
+   "end": 145,
+   "kind": "contained",
+   "length": 78,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003022",
+   "start": 35,
+   "end": 111,
+   "kind": "carried",
+   "length": 76,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003044",
+   "start": 129,
+   "end": 136,
+   "kind": "contained",
+   "length": 7,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003053",
+   "start": 32,
+   "end": 179,
+   "kind": "contained",
+   "length": 147,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003145",
+   "start": 50,
+   "end": 64,
+   "kind": "contained",
+   "length": 14,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003155",
+   "start": 195,
+   "end": 252,
+   "kind": "occluded",
+   "length": 57,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003188",
+   "start": 197,
+   "end": 213,
+   "kind": "occluded",
+   "length": 16,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003217",
+   "start": 62,
+   "end": 172,
+   "kind": "contained",
+   "length": 110,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003292",
+   "start": 128,
+   "end": 214,
+   "kind": "contained",
+   "length": 86,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003324",
+   "start": 27,
+   "end": 100,
+   "kind": "contained",
+   "length": 73,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003394",
+   "start": 164,
+   "end": 182,
+   "kind": "contained",
+   "length": 18,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003417",
+   "start": 87,
+   "end": 98,
+   "kind": "occluded",
+   "length": 11,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_003417",
+   "start": 228,
+   "end": 247,
+   "kind": "occluded",
+   "length": 19,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003417",
+   "start": 254,
+   "end": 269,
+   "kind": "occluded",
+   "length": 15,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003434",
+   "start": 18,
+   "end": 24,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003450",
+   "start": 67,
+   "end": 149,
+   "kind": "contained",
+   "length": 82,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003468",
+   "start": 59,
+   "end": 91,
+   "kind": "contained",
+   "length": 32,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003472",
+   "start": 67,
+   "end": 149,
+   "kind": "contained",
+   "length": 82,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003476",
+   "start": 86,
+   "end": 101,
+   "kind": "occluded",
+   "length": 15,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003481",
+   "start": 101,
+   "end": 109,
+   "kind": "contained",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003511",
+   "start": 25,
+   "end": 142,
+   "kind": "contained",
+   "length": 117,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003535",
+   "start": 258,
+   "end": 264,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003552",
+   "start": 229,
+   "end": 276,
+   "kind": "contained",
+   "length": 47,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003582",
+   "start": 30,
+   "end": 242,
+   "kind": "carried",
+   "length": 212,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003652",
+   "start": 163,
+   "end": 175,
+   "kind": "contained",
+   "length": 12,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003738",
+   "start": 137,
+   "end": 143,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003758",
+   "start": 90,
+   "end": 173,
+   "kind": "contained",
+   "length": 83,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003891",
+   "start": 34,
+   "end": 102,
+   "kind": "carried",
+   "length": 68,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003947",
+   "start": 20,
+   "end": 67,
+   "kind": "contained",
+   "length": 47,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003947",
+   "start": 152,
+   "end": 165,
+   "kind": "contained",
+   "length": 13,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003964",
+   "start": 28,
+   "end": 33,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_003964",
+   "start": 125,
+   "end": 132,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_003973",
+   "start": 62,
+   "end": 83,
+   "kind": "contained",
+   "length": 21,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004007",
+   "start": 154,
+   "end": 237,
+   "kind": "contained",
+   "length": 83,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004015",
+   "start": 162,
+   "end": 167,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004063",
+   "start": 109,
+   "end": 116,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_004063",
+   "start": 188,
+   "end": 250,
+   "kind": "contained",
+   "length": 62,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004092",
+   "start": 26,
+   "end": 98,
+   "kind": "contained",
+   "length": 72,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004112",
+   "start": 19,
+   "end": 68,
+   "kind": "contained",
+   "length": 49,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004134",
+   "start": 214,
+   "end": 219,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_004138",
+   "start": 62,
+   "end": 217,
+   "kind": "carried",
+   "length": 155,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004264",
+   "start": 91,
+   "end": 131,
+   "kind": "contained",
+   "length": 40,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004303",
+   "start": 82,
+   "end": 100,
+   "kind": "contained",
+   "length": 18,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004325",
+   "start": 164,
+   "end": 202,
+   "kind": "contained",
+   "length": 38,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004325",
+   "start": 231,
+   "end": 237,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004332",
+   "start": 134,
+   "end": 201,
+   "kind": "contained",
+   "length": 67,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004390",
+   "start": 92,
+   "end": 192,
+   "kind": "carried",
+   "length": 100,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004511",
+   "start": 167,
+   "end": 246,
+   "kind": "contained",
+   "length": 79,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_004526",
+   "start": 95,
+   "end": 204,
+   "kind": "contained",
+   "length": 109,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004544",
+   "start": 34,
+   "end": 212,
+   "kind": "carried",
+   "length": 178,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004544",
+   "start": 225,
+   "end": 230,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004590",
+   "start": 93,
+   "end": 132,
+   "kind": "carried",
+   "length": 39,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004605",
+   "start": 26,
+   "end": 201,
+   "kind": "contained",
+   "length": 175,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004717",
+   "start": 162,
+   "end": 169,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_004791",
+   "start": 90,
+   "end": 107,
+   "kind": "contained",
+   "length": 17,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_004791",
+   "start": 145,
+   "end": 152,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_004911",
+   "start": 194,
+   "end": 233,
+   "kind": "contained",
+   "length": 39,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004918",
+   "start": 194,
+   "end": 233,
+   "kind": "contained",
+   "length": 39,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004951",
+   "start": 252,
+   "end": 257,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004958",
+   "start": 108,
+   "end": 154,
+   "kind": "contained",
+   "length": 46,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_004961",
+   "start": 62,
+   "end": 140,
+   "kind": "carried",
+   "length": 78,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005000",
+   "start": 32,
+   "end": 172,
+   "kind": "carried",
+   "length": 140,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005001",
+   "start": 177,
+   "end": 185,
+   "kind": "occluded",
+   "length": 8,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_005040",
+   "start": 185,
+   "end": 193,
+   "kind": "occluded",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005077",
+   "start": 27,
+   "end": 37,
+   "kind": "contained",
+   "length": 10,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_005077",
+   "start": 199,
+   "end": 271,
+   "kind": "carried",
+   "length": 72,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005101",
+   "start": 107,
+   "end": 259,
+   "kind": "contained",
+   "length": 152,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005121",
+   "start": 24,
+   "end": 30,
+   "kind": "contained",
+   "length": 6,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_005128",
+   "start": 52,
+   "end": 62,
+   "kind": "occluded",
+   "length": 10,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005141",
+   "start": 103,
+   "end": 208,
+   "kind": "carried",
+   "length": 105,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005162",
+   "start": 58,
+   "end": 248,
+   "kind": "carried",
+   "length": 190,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005181",
+   "start": 31,
+   "end": 48,
+   "kind": "contained",
+   "length": 17,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005182",
+   "start": 67,
+   "end": 275,
+   "kind": "carried",
+   "length": 208,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005254",
+   "start": 17,
+   "end": 22,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005254",
+   "start": 39,
+   "end": 45,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005309",
+   "start": 37,
+   "end": 113,
+   "kind": "contained",
+   "length": 76,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005311",
+   "start": 229,
+   "end": 242,
+   "kind": "contained",
+   "length": 13,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_005357",
+   "start": 94,
+   "end": 170,
+   "kind": "contained",
+   "length": 76,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005399",
+   "start": 37,
+   "end": 47,
+   "kind": "contained",
+   "length": 10,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005422",
+   "start": 29,
+   "end": 47,
+   "kind": "contained",
+   "length": 18,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005422",
+   "start": 213,
+   "end": 223,
+   "kind": "contained",
+   "length": 10,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005484",
+   "start": 50,
+   "end": 58,
+   "kind": "occluded",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005608",
+   "start": 155,
+   "end": 197,
+   "kind": "contained",
+   "length": 42,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005612",
+   "start": 49,
+   "end": 61,
+   "kind": "occluded",
+   "length": 12,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005670",
+   "start": 34,
+   "end": 218,
+   "kind": "carried",
+   "length": 184,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005689",
+   "start": 24,
+   "end": 209,
+   "kind": "carried",
+   "length": 185,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005690",
+   "start": 19,
+   "end": 31,
+   "kind": "occluded",
+   "length": 12,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_005690",
+   "start": 97,
+   "end": 180,
+   "kind": "carried",
+   "length": 83,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005849",
+   "start": 30,
+   "end": 229,
+   "kind": "carried",
+   "length": 199,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005867",
+   "start": 91,
+   "end": 134,
+   "kind": "contained",
+   "length": 43,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005952",
+   "start": 108,
+   "end": 164,
+   "kind": "carried",
+   "length": 56,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_005996",
+   "start": 63,
+   "end": 208,
+   "kind": "carried",
+   "length": 145,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006026",
+   "start": 73,
+   "end": 244,
+   "kind": "contained",
+   "length": 171,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006059",
+   "start": 73,
+   "end": 244,
+   "kind": "contained",
+   "length": 171,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006090",
+   "start": 39,
+   "end": 83,
+   "kind": "contained",
+   "length": 44,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006165",
+   "start": 158,
+   "end": 165,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_006174",
+   "start": 30,
+   "end": 148,
+   "kind": "carried",
+   "length": 118,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006201",
+   "start": 67,
+   "end": 276,
+   "kind": "carried",
+   "length": 209,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006223",
+   "start": 27,
+   "end": 100,
+   "kind": "contained",
+   "length": 73,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006243",
+   "start": 54,
+   "end": 162,
+   "kind": "carried",
+   "length": 108,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006243",
+   "start": 220,
+   "end": 235,
+   "kind": "contained",
+   "length": 15,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006288",
+   "start": 29,
+   "end": 43,
+   "kind": "occluded",
+   "length": 14,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006389",
+   "start": 31,
+   "end": 217,
+   "kind": "carried",
+   "length": 186,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006390",
+   "start": 31,
+   "end": 217,
+   "kind": "carried",
+   "length": 186,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006408",
+   "start": 102,
+   "end": 110,
+   "kind": "occluded",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006416",
+   "start": 134,
+   "end": 226,
+   "kind": "carried",
+   "length": 92,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006449",
+   "start": 54,
+   "end": 69,
+   "kind": "occluded",
+   "length": 15,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_006469",
+   "start": 35,
+   "end": 135,
+   "kind": "carried",
+   "length": 100,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006486",
+   "start": 201,
+   "end": 253,
+   "kind": "contained",
+   "length": 52,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006496",
+   "start": 24,
+   "end": 169,
+   "kind": "contained",
+   "length": 145,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006496",
+   "start": 229,
+   "end": 241,
+   "kind": "contained",
+   "length": 12,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006501",
+   "start": 190,
+   "end": 200,
+   "kind": "occluded",
+   "length": 10,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006528",
+   "start": 69,
+   "end": 180,
+   "kind": "carried",
+   "length": 111,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006545",
+   "start": 87,
+   "end": 128,
+   "kind": "contained",
+   "length": 41,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006608",
+   "start": 82,
+   "end": 92,
+   "kind": "occluded",
+   "length": 10,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_006608",
+   "start": 230,
+   "end": 261,
+   "kind": "occluded",
+   "length": 31,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006710",
+   "start": 52,
+   "end": 229,
+   "kind": "carried",
+   "length": 177,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006711",
+   "start": 161,
+   "end": 166,
+   "kind": "contained",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006711",
+   "start": 259,
+   "end": 273,
+   "kind": "contained",
+   "length": 14,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006909",
+   "start": 29,
+   "end": 250,
+   "kind": "carried",
+   "length": 221,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_006994",
+   "start": 28,
+   "end": 268,
+   "kind": "carried",
+   "length": 240,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007000",
+   "start": 28,
+   "end": 268,
+   "kind": "carried",
+   "length": 240,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007013",
+   "start": 136,
+   "end": 181,
+   "kind": "contained",
+   "length": 45,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007028",
+   "start": 122,
+   "end": 137,
+   "kind": "occluded",
+   "length": 15,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007028",
+   "start": 164,
+   "end": 178,
+   "kind": "occluded",
+   "length": 14,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007035",
+   "start": 163,
+   "end": 177,
+   "kind": "occluded",
+   "length": 14,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007065",
+   "start": 124,
+   "end": 278,
+   "kind": "carried",
+   "length": 154,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007067",
+   "start": 181,
+   "end": 258,
+   "kind": "carried",
+   "length": 77,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007078",
+   "start": 69,
+   "end": 269,
+   "kind": "carried",
+   "length": 200,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007130",
+   "start": 80,
+   "end": 237,
+   "kind": "contained",
+   "length": 157,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007147",
+   "start": 65,
+   "end": 133,
+   "kind": "contained",
+   "length": 68,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007200",
+   "start": 35,
+   "end": 42,
+   "kind": "contained",
+   "length": 7,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007200",
+   "start": 79,
+   "end": 85,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_007303",
+   "start": 58,
+   "end": 99,
+   "kind": "carried",
+   "length": 41,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007320",
+   "start": 24,
+   "end": 72,
+   "kind": "contained",
+   "length": 48,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007365",
+   "start": 182,
+   "end": 273,
+   "kind": "carried",
+   "length": 91,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007473",
+   "start": 91,
+   "end": 217,
+   "kind": "contained",
+   "length": 126,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007557",
+   "start": 63,
+   "end": 77,
+   "kind": "contained",
+   "length": 14,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007610",
+   "start": 59,
+   "end": 263,
+   "kind": "carried",
+   "length": 204,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007612",
+   "start": 24,
+   "end": 41,
+   "kind": "contained",
+   "length": 17,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007638",
+   "start": 30,
+   "end": 151,
+   "kind": "carried",
+   "length": 121,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007658",
+   "start": 125,
+   "end": 142,
+   "kind": "contained",
+   "length": 17,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007660",
+   "start": 125,
+   "end": 142,
+   "kind": "contained",
+   "length": 17,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007695",
+   "start": 27,
+   "end": 146,
+   "kind": "contained",
+   "length": 119,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007699",
+   "start": 97,
+   "end": 109,
+   "kind": "contained",
+   "length": 12,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_007728",
+   "start": 37,
+   "end": 51,
+   "kind": "contained",
+   "length": 14,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_007751",
+   "start": 93,
+   "end": 209,
+   "kind": "contained",
+   "length": 116,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007802",
+   "start": 30,
+   "end": 36,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_007802",
+   "start": 165,
+   "end": 174,
+   "kind": "contained",
+   "length": 9,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007816",
+   "start": 38,
+   "end": 108,
+   "kind": "carried",
+   "length": 70,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007877",
+   "start": 139,
+   "end": 280,
+   "kind": "carried",
+   "length": 141,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007902",
+   "start": 64,
+   "end": 72,
+   "kind": "contained",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007920",
+   "start": 272,
+   "end": 279,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_007934",
+   "start": 105,
+   "end": 117,
+   "kind": "contained",
+   "length": 12,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007934",
+   "start": 202,
+   "end": 247,
+   "kind": "contained",
+   "length": 45,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007937",
+   "start": 49,
+   "end": 54,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007956",
+   "start": 89,
+   "end": 180,
+   "kind": "occluded",
+   "length": 91,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_007996",
+   "start": 92,
+   "end": 201,
+   "kind": "carried",
+   "length": 109,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008010",
+   "start": 140,
+   "end": 275,
+   "kind": "contained",
+   "length": 135,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008017",
+   "start": 140,
+   "end": 275,
+   "kind": "contained",
+   "length": 135,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008018",
+   "start": 180,
+   "end": 187,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_008018",
+   "start": 228,
+   "end": 260,
+   "kind": "occluded",
+   "length": 32,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008036",
+   "start": 33,
+   "end": 161,
+   "kind": "contained",
+   "length": 128,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008089",
+   "start": 96,
+   "end": 175,
+   "kind": "carried",
+   "length": 79,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008120",
+   "start": 73,
+   "end": 82,
+   "kind": "occluded",
+   "length": 9,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008120",
+   "start": 126,
+   "end": 138,
+   "kind": "occluded",
+   "length": 12,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008186",
+   "start": 88,
+   "end": 133,
+   "kind": "contained",
+   "length": 45,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008228",
+   "start": 216,
+   "end": 223,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_008228",
+   "start": 257,
+   "end": 268,
+   "kind": "contained",
+   "length": 11,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008288",
+   "start": 60,
+   "end": 109,
+   "kind": "contained",
+   "length": 49,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008294",
+   "start": 98,
+   "end": 112,
+   "kind": "contained",
+   "length": 14,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008294",
+   "start": 197,
+   "end": 240,
+   "kind": "contained",
+   "length": 43,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008401",
+   "start": 23,
+   "end": 29,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_008441",
+   "start": 35,
+   "end": 49,
+   "kind": "occluded",
+   "length": 14,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008441",
+   "start": 159,
+   "end": 173,
+   "kind": "contained",
+   "length": 14,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008482",
+   "start": 61,
+   "end": 274,
+   "kind": "contained",
+   "length": 213,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008498",
+   "start": 95,
+   "end": 161,
+   "kind": "contained",
+   "length": 66,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008518",
+   "start": 95,
+   "end": 161,
+   "kind": "contained",
+   "length": 66,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008535",
+   "start": 128,
+   "end": 211,
+   "kind": "carried",
+   "length": 83,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008545",
+   "start": 63,
+   "end": 82,
+   "kind": "occluded",
+   "length": 19,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008548",
+   "start": 228,
+   "end": 235,
+   "kind": "contained",
+   "length": 7,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008568",
+   "start": 232,
+   "end": 267,
+   "kind": "carried",
+   "length": 35,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008569",
+   "start": 97,
+   "end": 250,
+   "kind": "contained",
+   "length": 153,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008569",
+   "start": 262,
+   "end": 270,
+   "kind": "occluded",
+   "length": 8,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_008573",
+   "start": 97,
+   "end": 250,
+   "kind": "contained",
+   "length": 153,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008716",
+   "start": 30,
+   "end": 229,
+   "kind": "carried",
+   "length": 199,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008736",
+   "start": 24,
+   "end": 131,
+   "kind": "contained",
+   "length": 107,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008767",
+   "start": 36,
+   "end": 44,
+   "kind": "occluded",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008767",
+   "start": 62,
+   "end": 96,
+   "kind": "contained",
+   "length": 34,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_008771",
+   "start": 220,
+   "end": 232,
+   "kind": "occluded",
+   "length": 12,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008786",
+   "start": 33,
+   "end": 273,
+   "kind": "carried",
+   "length": 240,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008823",
+   "start": 57,
+   "end": 257,
+   "kind": "carried",
+   "length": 200,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008842",
+   "start": 63,
+   "end": 272,
+   "kind": "contained",
+   "length": 209,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008853",
+   "start": 64,
+   "end": 72,
+   "kind": "contained",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_008861",
+   "start": 29,
+   "end": 46,
+   "kind": "contained",
+   "length": 17,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_008964",
+   "start": 195,
+   "end": 200,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_009015",
+   "start": 28,
+   "end": 50,
+   "kind": "contained",
+   "length": 22,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009088",
+   "start": 134,
+   "end": 144,
+   "kind": "occluded",
+   "length": 10,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009112",
+   "start": 102,
+   "end": 113,
+   "kind": "contained",
+   "length": 11,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009172",
+   "start": 54,
+   "end": 98,
+   "kind": "carried",
+   "length": 44,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009185",
+   "start": 57,
+   "end": 99,
+   "kind": "carried",
+   "length": 42,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009234",
+   "start": 158,
+   "end": 238,
+   "kind": "contained",
+   "length": 80,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009260",
+   "start": 171,
+   "end": 213,
+   "kind": "contained",
+   "length": 42,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_009304",
+   "start": 242,
+   "end": 254,
+   "kind": "contained",
+   "length": 12,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009364",
+   "start": 110,
+   "end": 138,
+   "kind": "occluded",
+   "length": 28,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009390",
+   "start": 46,
+   "end": 54,
+   "kind": "occluded",
+   "length": 8,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_009400",
+   "start": 95,
+   "end": 180,
+   "kind": "carried",
+   "length": 85,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009448",
+   "start": 77,
+   "end": 88,
+   "kind": "contained",
+   "length": 11,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009544",
+   "start": 90,
+   "end": 173,
+   "kind": "contained",
+   "length": 83,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009584",
+   "start": 27,
+   "end": 249,
+   "kind": "carried",
+   "length": 222,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009636",
+   "start": 130,
+   "end": 151,
+   "kind": "occluded",
+   "length": 21,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_009728",
+   "start": 22,
+   "end": 34,
+   "kind": "occluded",
+   "length": 12,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009728",
+   "start": 59,
+   "end": 146,
+   "kind": "contained",
+   "length": 87,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009775",
+   "start": 27,
+   "end": 75,
+   "kind": "contained",
+   "length": 48,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_009780",
+   "start": 225,
+   "end": 231,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009788",
+   "start": 18,
+   "end": 46,
+   "kind": "occluded",
+   "length": 28,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009803",
+   "start": 139,
+   "end": 251,
+   "kind": "carried",
+   "length": 112,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009816",
+   "start": 63,
+   "end": 144,
+   "kind": "contained",
+   "length": 81,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009843",
+   "start": 19,
+   "end": 72,
+   "kind": "contained",
+   "length": 53,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009860",
+   "start": 168,
+   "end": 253,
+   "kind": "carried",
+   "length": 85,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009864",
+   "start": 29,
+   "end": 75,
+   "kind": "carried",
+   "length": 46,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009866",
+   "start": 25,
+   "end": 40,
+   "kind": "occluded",
+   "length": 15,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009866",
+   "start": 220,
+   "end": 228,
+   "kind": "occluded",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009871",
+   "start": 96,
+   "end": 214,
+   "kind": "contained",
+   "length": 118,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009885",
+   "start": 121,
+   "end": 179,
+   "kind": "contained",
+   "length": 58,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009894",
+   "start": 170,
+   "end": 191,
+   "kind": "occluded",
+   "length": 21,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009925",
+   "start": 159,
+   "end": 242,
+   "kind": "carried",
+   "length": 83,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009941",
+   "start": 200,
+   "end": 217,
+   "kind": "contained",
+   "length": 17,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_009966",
+   "start": 30,
+   "end": 63,
+   "kind": "carried",
+   "length": 33,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_009982",
+   "start": 57,
+   "end": 181,
+   "kind": "contained",
+   "length": 124,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010040",
+   "start": 34,
+   "end": 41,
+   "kind": "contained",
+   "length": 7,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_010101",
+   "start": 66,
+   "end": 179,
+   "kind": "carried",
+   "length": 113,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010148",
+   "start": 69,
+   "end": 74,
+   "kind": "contained",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010148",
+   "start": 89,
+   "end": 99,
+   "kind": "occluded",
+   "length": 10,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010148",
+   "start": 133,
+   "end": 203,
+   "kind": "contained",
+   "length": 70,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010176",
+   "start": 185,
+   "end": 259,
+   "kind": "contained",
+   "length": 74,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010290",
+   "start": 27,
+   "end": 148,
+   "kind": "carried",
+   "length": 121,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010312",
+   "start": 77,
+   "end": 82,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_010312",
+   "start": 240,
+   "end": 246,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_010327",
+   "start": 57,
+   "end": 266,
+   "kind": "carried",
+   "length": 209,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010336",
+   "start": 98,
+   "end": 136,
+   "kind": "contained",
+   "length": 38,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010338",
+   "start": 25,
+   "end": 144,
+   "kind": "carried",
+   "length": 119,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010413",
+   "start": 68,
+   "end": 78,
+   "kind": "contained",
+   "length": 10,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010413",
+   "start": 130,
+   "end": 144,
+   "kind": "contained",
+   "length": 14,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010442",
+   "start": 33,
+   "end": 145,
+   "kind": "carried",
+   "length": 112,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010442",
+   "start": 166,
+   "end": 194,
+   "kind": "occluded",
+   "length": 28,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010504",
+   "start": 145,
+   "end": 154,
+   "kind": "occluded",
+   "length": 9,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_010533",
+   "start": 33,
+   "end": 74,
+   "kind": "contained",
+   "length": 41,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010597",
+   "start": 164,
+   "end": 173,
+   "kind": "occluded",
+   "length": 9,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010597",
+   "start": 220,
+   "end": 228,
+   "kind": "occluded",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010655",
+   "start": 20,
+   "end": 25,
+   "kind": "occluded",
+   "length": 5,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010655",
+   "start": 96,
+   "end": 133,
+   "kind": "carried",
+   "length": 37,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010723",
+   "start": 28,
+   "end": 175,
+   "kind": "contained",
+   "length": 147,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010725",
+   "start": 130,
+   "end": 139,
+   "kind": "occluded",
+   "length": 9,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010729",
+   "start": 144,
+   "end": 234,
+   "kind": "contained",
+   "length": 90,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010760",
+   "start": 76,
+   "end": 161,
+   "kind": "occluded",
+   "length": 85,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010770",
+   "start": 66,
+   "end": 168,
+   "kind": "contained",
+   "length": 102,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010860",
+   "start": 212,
+   "end": 255,
+   "kind": "carried",
+   "length": 43,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010990",
+   "start": 166,
+   "end": 255,
+   "kind": "contained",
+   "length": 89,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_010999",
+   "start": 71,
+   "end": 116,
+   "kind": "contained",
+   "length": 45,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011013",
+   "start": 61,
+   "end": 74,
+   "kind": "contained",
+   "length": 13,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011109",
+   "start": 166,
+   "end": 188,
+   "kind": "occluded",
+   "length": 22,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011118",
+   "start": 34,
+   "end": 70,
+   "kind": "contained",
+   "length": 36,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011118",
+   "start": 128,
+   "end": 180,
+   "kind": "contained",
+   "length": 52,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011127",
+   "start": 90,
+   "end": 270,
+   "kind": "contained",
+   "length": 180,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011168",
+   "start": 36,
+   "end": 43,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011302",
+   "start": 106,
+   "end": 147,
+   "kind": "contained",
+   "length": 41,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011304",
+   "start": 33,
+   "end": 245,
+   "kind": "carried",
+   "length": 212,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011371",
+   "start": 29,
+   "end": 73,
+   "kind": "contained",
+   "length": 44,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011389",
+   "start": 207,
+   "end": 229,
+   "kind": "occluded",
+   "length": 22,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_011670",
+   "start": 88,
+   "end": 94,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_011670",
+   "start": 123,
+   "end": 158,
+   "kind": "occluded",
+   "length": 35,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_011696",
+   "start": 39,
+   "end": 49,
+   "kind": "contained",
+   "length": 10,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011716",
+   "start": 168,
+   "end": 211,
+   "kind": "carried",
+   "length": 43,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011721",
+   "start": 30,
+   "end": 72,
+   "kind": "carried",
+   "length": 42,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011744",
+   "start": 63,
+   "end": 270,
+   "kind": "contained",
+   "length": 207,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011757",
+   "start": 64,
+   "end": 72,
+   "kind": "contained",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011832",
+   "start": 50,
+   "end": 64,
+   "kind": "contained",
+   "length": 14,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011832",
+   "start": 200,
+   "end": 218,
+   "kind": "occluded",
+   "length": 18,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011844",
+   "start": 216,
+   "end": 258,
+   "kind": "contained",
+   "length": 42,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011886",
+   "start": 39,
+   "end": 83,
+   "kind": "contained",
+   "length": 44,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011892",
+   "start": 38,
+   "end": 44,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011896",
+   "start": 25,
+   "end": 77,
+   "kind": "contained",
+   "length": 52,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011919",
+   "start": 62,
+   "end": 172,
+   "kind": "contained",
+   "length": 110,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011923",
+   "start": 27,
+   "end": 104,
+   "kind": "contained",
+   "length": 77,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011932",
+   "start": 159,
+   "end": 233,
+   "kind": "carried",
+   "length": 74,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011947",
+   "start": 65,
+   "end": 71,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_011947",
+   "start": 128,
+   "end": 209,
+   "kind": "contained",
+   "length": 81,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012006",
+   "start": 68,
+   "end": 182,
+   "kind": "contained",
+   "length": 114,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012012",
+   "start": 22,
+   "end": 70,
+   "kind": "contained",
+   "length": 48,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012026",
+   "start": 168,
+   "end": 208,
+   "kind": "carried",
+   "length": 40,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012032",
+   "start": 182,
+   "end": 189,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_012044",
+   "start": 61,
+   "end": 165,
+   "kind": "contained",
+   "length": 104,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012079",
+   "start": 27,
+   "end": 51,
+   "kind": "contained",
+   "length": 24,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012135",
+   "start": 26,
+   "end": 179,
+   "kind": "carried",
+   "length": 153,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012143",
+   "start": 70,
+   "end": 109,
+   "kind": "carried",
+   "length": 39,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012180",
+   "start": 101,
+   "end": 109,
+   "kind": "contained",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012212",
+   "start": 242,
+   "end": 254,
+   "kind": "contained",
+   "length": 12,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012223",
+   "start": 183,
+   "end": 196,
+   "kind": "occluded",
+   "length": 13,
+   "motion": "static"
+  },
+  {
+   "clip": "CLEVR_new_012239",
+   "start": 258,
+   "end": 264,
+   "kind": "occluded",
+   "length": 6,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012257",
+   "start": 23,
+   "end": 234,
+   "kind": "contained",
+   "length": 211,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012273",
+   "start": 35,
+   "end": 135,
+   "kind": "carried",
+   "length": 100,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012298",
+   "start": 33,
+   "end": 147,
+   "kind": "contained",
+   "length": 114,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012298",
+   "start": 229,
+   "end": 239,
+   "kind": "occluded",
+   "length": 10,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012346",
+   "start": 87,
+   "end": 128,
+   "kind": "contained",
+   "length": 41,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012382",
+   "start": 16,
+   "end": 23,
+   "kind": "occluded",
+   "length": 7,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012382",
+   "start": 180,
+   "end": 230,
+   "kind": "contained",
+   "length": 50,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012527",
+   "start": 32,
+   "end": 105,
+   "kind": "contained",
+   "length": 73,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012555",
+   "start": 155,
+   "end": 163,
+   "kind": "contained",
+   "length": 8,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012562",
+   "start": 24,
+   "end": 258,
+   "kind": "carried",
+   "length": 234,
+   "motion": "moved"
+  },
+  {
+   "clip": "CLEVR_new_012635",
+   "start": 75,
+   "end": 218,
+   "kind": "carried",
+   "length": 143,
+   "motion": "moved"
+  }
+ ]
+}

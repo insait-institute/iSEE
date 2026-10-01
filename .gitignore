@@ -1,0 +1,6 @@
+data/
+outputs/
+runs/
+__pycache__/
+*.pyc
+checkpoints/nope_coco_dv2_vits14_reg4.pth

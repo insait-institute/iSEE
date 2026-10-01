@@ -1,0 +1,7 @@
+torch>=2.1
+timm>=1.0
+safetensors>=0.4
+numpy
+pyyaml
+av
+pillow

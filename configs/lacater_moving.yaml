@@ -1,0 +1,58 @@
+# iSEE on LA-CATER, moving camera.
+model:
+  num_slots: 11
+  input_size: 518
+  checkpoint: checkpoints/isee_lacater_moving.safetensors
+ten:
+  tau: 0.5
+  rho: 0.9
+  release: topk
+  window_dilation: 5
+walker:
+  checkpoints:
+    - checkpoints/walker_lacater_moving_seed0.safetensors
+    - checkpoints/walker_lacater_moving_seed1.safetensors
+    - checkpoints/walker_lacater_moving_seed2.safetensors
+  dmax: 0.6
+training:
+  data: {dataset: lacater, root: data/la_cater_moving, chunk: 8, stride: 2, samples_per_clip: 8}
+  batch_size: 32
+  workers: 16
+  steps: 100000
+  lr: 4.0e-4
+  warmup: 2500
+  grad_clip: 0.05
+  precision: bf16
+  checkpoint_every: 5000
+  log_every: 500
+  seed: 20260826
+walker_training:
+  hold_rule: {tau: 0.5, rho: 0.8, release: window_topk, window_dilation: 9, track_scene: true}
+  clips: 2000                # the first 2000 training clips, sorted by name
+  data: data/walker/lacater_moving
+  steps: 2000
+  schedule_steps: 4000       # the cosine schedule spans 4000 steps; training stops at 2000
+  batch_size: 16
+  lr: 1.0e-3
+  warmup: 100
+  lr_floor: 0.05
+  grad_clip: 1.0
+  ema: 0.998
+  dmax: 0.6
+  pseudo_per_clip: 8
+  pseudo_len: [1, 8]
+  moved_boost: 4.0
+  seeds: [0, 1, 2]
+  val_clips: 100
+  val_batch: 8
+  val_every: 500
+  save_every: 500
+  log_every: 25
+evaluation:
+  data: data/la_cater_moving
+  masks: data/lacater_masks/moving
+  occlusions: eval_sets/lacater_moving.json
+  discovery_clips: 150
+  batch_clips: 8
+  preprocess_device: cuda    # where frames are resized (isee/data/video.py, preprocess)
+  tf32: true
