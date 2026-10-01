@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iSEE: Object Permanence through Self-Supervision</title>
+<meta name="description" content="iSEE learns object permanence from video alone, without labels: it notices when an object disappears, remembers what it looked like, follows where it goes while hidden, and recognises it when it returns.">
+<meta property="og:title" content="iSEE: Object Permanence through Self-Supervision">
+<meta property="og:description" content="iSEE learns object permanence from video alone, without labels: it notices when an object disappears, remembers what it looked like, follows where it goes while hidden, and recognises it when it returns.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://insait-institute.github.io/iSEE/">
+<meta property="og:image" content="https://insait-institute.github.io/iSEE/media/static_000993_62.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10.5' fill='none' stroke='%2329A85A' stroke-width='5' stroke-dasharray='7 4.2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script src="page.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero"><h1>iSEE: Object Permanence through Self-Supervision</h1><p class="authors"><span>Pramish Paudel</span><span>Ajad Chhatkuli</span><span>Luc Van Gool</span><span>Danda Pani Paudel</span></p><p class="affils">INSAIT, Sofia University &quot;Kliment Ohridski&quot;</p><p class="logos"><img src="logos/insait.webp" height="60" alt="INSAIT" decoding="async"></p><div class="buttons"><span class="btn" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm-1 1.8L18.2 9H13zM8 12.5h8V14H8zm0 3.5h8v1.5H8z"/></svg>Paper <span class="soon">(soon)</span></span><span class="btn" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h9l5 5v13H5zm2 2v14h10V9h-4V5zm1.5 6.5h7V13h-7zm0 3h7V16h-7z"/></svg>arXiv <span class="soon">(soon)</span></span><span class="btn" aria-disabled="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>Code <span class="soon">(soon)</span></span><a class="btn" href="#bibtex"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h5v5c0 3-1.7 5.2-4.6 5.9l-.6-1.7c1.6-.5 2.4-1.6 2.5-3.2H6zm8 0h5v5c0 3-1.7 5.2-4.6 5.9l-.6-1.7c1.6-.5 2.4-1.6 2.5-3.2H14z"/></svg>BibTeX</a></div></header>
+
+<section id="permanence" class="hook">
+  <p class="kicker">Object permanence</p>
+  <h2 class="display">Hidden is not gone.</h2>
+  <p class="lead">A covered object still exists, and it is still somewhere. Infants learn this in their first year,
+  and many animals show it too.</p>
+  <div class="ytgrid"><figure class="ytfig"><a class="yt" href="https://www.youtube.com/watch?v=qnOvSBBWuCA&amp;t=2s" target="_blank" rel="noopener" data-id="qnOvSBBWuCA" data-start="2" aria-label="A cat follows a ball hidden under shuffled cups."><img src="https://i.ytimg.com/vi/qnOvSBBWuCA/hqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><svg class="play" viewBox="0 0 68 48" aria-hidden="true"><rect width="68" height="48" rx="12" fill="rgba(0,0,0,.62)"/><path d="M27.5 14.5v19l16-9.5z" fill="#fff"/></svg></a><figcaption>A cat follows a ball hidden under shuffled cups. <span class="credit">Video: Robert Zebib, YouTube</span></figcaption></figure><figure class="ytfig"><a class="yt" href="https://www.youtube.com/watch?v=ypvH6qMz_qE" target="_blank" rel="noopener" data-id="ypvH6qMz_qE" data-start="0" aria-label="An infant pulls a cloth off a hidden toy (Piaget&#x27;s search task)."><img src="https://i.ytimg.com/vi/ypvH6qMz_qE/hqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><svg class="play" viewBox="0 0 68 48" aria-hidden="true"><rect width="68" height="48" rx="12" fill="rgba(0,0,0,.62)"/><path d="M27.5 14.5v19l16-9.5z" fill="#fff"/></svg></a><figcaption>An infant pulls a cloth off a hidden toy (Piaget&#x27;s search task). <span class="credit">Video: Julian Lloyd, YouTube</span></figcaption></figure><figure class="ytfig"><a class="yt" href="https://www.youtube.com/watch?v=rNWPqfCJDnc" target="_blank" rel="noopener" data-id="rNWPqfCJDnc" data-start="0" aria-label="A young orangutan sees an object vanish from a cup, a magic trick."><img src="https://i.ytimg.com/vi/rNWPqfCJDnc/hqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><svg class="play" viewBox="0 0 68 48" aria-hidden="true"><rect width="68" height="48" rx="12" fill="rgba(0,0,0,.62)"/><path d="M27.5 14.5v19l16-9.5z" fill="#fff"/></svg></a><figcaption>A young orangutan sees an object vanish from a cup, a magic trick. <span class="credit">Video: CBS News, YouTube</span></figcaption></figure></div>
+  <p class="pivot"><b>To build world models that represent the world accurately, object permanence is the first
+  thing to get right.</b> An object that leaves view has not left the world: it keeps its identity, and it keeps
+  moving.</p>
+  <p class="pivot">In this work, we learn object permanence from video alone, without labels. iSEE notices when an
+  object disappears, remembers what it looked like, follows where it goes while hidden, and recognises it when it
+  returns.</p>
+</section>
+
+<figure class="teaser single"><figure class="clip" data-n="208" data-fps="24"><div class="frame"><video src="media/static_000993_62.mp4" poster="media/static_000993_62.jpg" width="640" height="480" muted loop playsinline preload="none" controls autoplay aria-label="LA-CATER clip CLEVR_new_000993, static camera: the target is fully hidden on 168 of its 208 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:6.731%;width:80.769%"></i><b class="ph"></b></div></figure><figcaption class="caption">iSEE on LA-CATER: the target (white) is covered by nested cones and carried, out of sight for 7.0 s. Green: iSEE's estimate of the target, dashed while it is hidden. The bar under the video marks the hidden frames.</figcaption></figure>
+
+<section id="abstract" class="text abstract">
+  <h2>Abstract</h2>
+  <p>Object permanence, keeping track of an object&#x27;s identity and position while it is occluded, is central to video representations that track, predict and plan. Trackers that achieve it learn from boxes, track identities and visibility labels. On the other hand, self-supervised object-centric methods discover objects without labels: through slot attention, it represents a video as slots that bind to objects and follow them across frames. However, these slots are lost under occlusion, making the desired permanence impossible. Reasoning permanence is a hard problem because it requires to detect when an object becomes occluded, re-identify when object reappears, and keep the object&#x27;s hidden position continuous, using reapperance as the only learning cue. To address this, we propose iSEE, a novel framework that offers all three aforementioned requirements, without any labels whatsoever. We built iSEE using the following three proposed components: (i) Object evidence modelling: a slot&#x27;s attention, compared with its own past, reveals when its object is hidden. (ii) Appearance-position separation: two slot streams let the appearance be held for re-identification while the position keeps changing. (iii) Permanence from reappearance: a walker follows the hidden object&#x27;s position, trained only on where the object reappears. On LA-CATER static, iSEE returns a reappearing object to its own slot after 86 % of occlusions, against 32 % for SlotContrast, and localises it while hidden within 4.1 mAP of the label-trained SoTA RAM. The two streams also allow downstream planning, with the position stream as the action of a world model.</p>
+</section>
+
+<section id="overview">
+  <h2>Overview</h2>
+  <figure class="fig"><img class="" src="img/teaser.webp" width="2200" height="749" alt="Figure 1 of the paper: one LA-CATER occlusion followed by iSEE, and the re-identification versus permanence scatter on LA-CATER, static camera" loading="lazy" decoding="async">
+  <figcaption class="caption"><b>(a)</b> Slot <i>k</i> (green) holds the ball; dashed, its mask placed at iSEE's
+  predicted position while the ball is hidden. The slot's evidence, the attention it receives from the frame's
+  patches, falls at the occlusion and recovers at the return. During the occlusion the appearance is held and the
+  position keeps walking, learnt only from where the object reappears (red ring).
+  <b>(b)</b> LA-CATER, static camera. Re-identification, SAME&nbsp;↑: the share of the 183 scorable occlusions
+  after which the target returns to the slot that held it before (before and after: the last and first frame with at
+  least half of the target visible). Permanence, mAP@[0.1,0.3]&nbsp;↑: over all hidden frames of the 195
+  occlusions (defined under Results). Each arrow adds one component to SlotContrast. RAM is trained with boxes, track
+  identities and visibility labels.</figcaption></figure>
+</section>
+
+<section id="method">
+  <h2>Method</h2>
+  <div class="figrow">
+    <div style="flex:700"><img class="" src="img/overview.webp" width="700" height="704" alt="The two-stream slot in training" loading="lazy" decoding="async"></div><div class="sep"></div>
+    <div style="flex:1364"><img class="" src="img/ten.webp" width="1364" height="705" alt="Temporal evidence normalisation" loading="lazy" decoding="async"></div>
+  </div>
+  <ul class="method-list">
+    <li><b>Two streams.</b> Each slot is split into an appearance stream <b>a</b> and a position stream <b>p</b>.
+    Slot attention writes <b>a</b> from the frozen DINOv2 features and <b>p</b> from a fixed grid of patch
+    coordinates; the decoder places each object from <b>p</b> alone.</li>
+    <li><b>Temporal evidence normalisation (TEN).</b> A slot's attention on a frame is divided by the most it received
+    earlier in the clip. When the ratio falls below τ the slot is <i>held</i>: its appearance is kept for
+    re-identification. It is released when the ratio rises above ρ. TEN has no parameters.</li>
+    <li><b>The walker.</b> While a slot is held, a random walk over patches on a graph of appearance features moves
+    its position. Its only training target is the position the encoder gives the slot just after the object
+    reappears; no ground-truth position enters the loss.</li>
+  </ul>
+</section>
+
+<section id="examples">
+  <h2>Examples</h2>
+  <div class="legend" role="list"><div class="li" role="listitem"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#8E8F8C"/><circle cx="14" cy="14" r="7.5" fill="none" stroke="#1A1A1A" stroke-width="2.6"/><circle cx="14" cy="14" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="1.3"/></svg>target (ground truth)</div><div class="li" role="listitem"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#8E8F8C"/><circle cx="14" cy="14" r="8" fill="none" stroke="#FFFFFF" stroke-width="3.6"/><circle cx="14" cy="14" r="8" fill="none" stroke="#29A85A" stroke-width="1.9"/></svg>the slot on the target</div><div class="li" role="listitem"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#8E8F8C"/><circle cx="14" cy="14" r="8" fill="none" stroke="#FFFFFF" stroke-width="3.6"/><circle cx="14" cy="14" r="8" fill="none" stroke="#29A85A" stroke-width="1.9" stroke-dasharray="4.2 2.9"/></svg>that slot, placed at the predicted position while the target is hidden</div><div class="li" role="listitem"><svg width="34" height="10" viewBox="0 0 34 10" aria-hidden="true"><rect width="34" height="10" rx="5" fill="#e3e5e8"/><rect x="10" width="14" height="10" fill="#9aa0a6"/></svg>frames on which the target is fully hidden</div></div>
+  <p class="note">LA-CATER clips are selected among occlusions iSEE scores well on; failure cases are at the end.</p>
+  <h3>LA-CATER, moving camera</h3>
+  <div class="grid"><figure class="clip" data-n="218" data-fps="24"><div class="frame"><video src="media/moving_001602_66.mp4" poster="media/moving_001602_66.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_001602, moving camera: the target is fully hidden on 140 of its 218 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:6.422%;width:64.220%"></i><b class="ph"></b></div><figcaption>Contained and carried <span class="dur">· hidden 5.8 s</span></figcaption></figure><figure class="clip" data-n="132" data-fps="24"><div class="frame"><video src="media/moving_001240_60.mp4" poster="media/moving_001240_60.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_001240, moving camera: the target is fully hidden on 93 of its 132 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:9.848%;width:70.455%"></i><b class="ph"></b></div><figcaption>Contained and carried <span class="dur">· hidden 3.9 s</span></figcaption></figure><figure class="clip" data-n="72" data-fps="24"><div class="frame"><video src="media/moving_001234_33.mp4" poster="media/moving_001234_33.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_001234, moving camera: the target is fully hidden on 12 of its 72 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:45.833%;width:16.667%"></i><b class="ph"></b></div><figcaption>Contained <span class="dur">· hidden 0.5 s</span></figcaption></figure><figure class="clip" data-n="72" data-fps="24"><div class="frame"><video src="media/moving_000058_161.mp4" poster="media/moving_000058_161.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_000058, moving camera: the target is fully hidden on 12 of its 72 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:47.222%;width:16.667%"></i><b class="ph"></b></div><figcaption>Contained <span class="dur">· hidden 0.5 s</span></figcaption></figure></div>
+  <h3>LA-CATER, static camera</h3>
+  <div class="grid"><figure class="clip" data-n="121" data-fps="24"><div class="frame"><video src="media/static_001406_94.mp4" poster="media/static_001406_94.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_001406, static camera: the target is fully hidden on 82 of its 121 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:11.570%;width:66.942%"></i><i style="left:95.041%;width:0.826%"></i><b class="ph"></b></div><figcaption>Contained and carried <span class="dur">· hidden 3.4 s</span></figcaption></figure><figure class="clip" data-n="112" data-fps="24"><div class="frame"><video src="media/static_001058_127.mp4" poster="media/static_001058_127.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_001058, static camera: the target is fully hidden on 72 of its 112 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:12.500%;width:64.286%"></i><b class="ph"></b></div><figcaption>Contained and carried <span class="dur">· hidden 3.0 s</span></figcaption></figure><figure class="clip" data-n="187" data-fps="24"><div class="frame"><video src="media/static_001185_48.mp4" poster="media/static_001185_48.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_001185, static camera: the target is fully hidden on 149 of its 187 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:6.952%;width:79.679%"></i><b class="ph"></b></div><figcaption>Contained <span class="dur">· hidden 6.2 s</span></figcaption></figure></div>
+  <h3>Against the baselines</h3>
+  <div data-tabs><div class="stack"><figure class="clip quad" data-n="147" data-fps="24" data-tab="Static camera 1"><div class="frame"><video src="media/static_000018_33.mp4" poster="media/static_000018_33.jpg" width="1288" height="968" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_000018, static camera: the target is fully hidden on 107 of its 147 frames"></video><span class="lab" style="left:calc(0.000% + 8px);top:calc(0.000% + 8px)">SlotContrast</span><span class="lab" style="left:calc(50.311% + 8px);top:calc(0.000% + 8px)">RandSF.Q</span><span class="lab" style="left:calc(0.000% + 8px);top:calc(50.413% + 8px)">Loci-Looped</span><span class="lab ours" style="left:calc(50.311% + 8px);top:calc(50.413% + 8px)">iSEE (ours)</span></div><div class="tl" aria-hidden="true"><i style="left:9.524%;width:72.789%"></i><b class="ph"></b></div></figure><figure class="clip quad" data-n="222" data-fps="24" data-tab="Static camera 2"><div class="frame"><video src="media/static_000365_29.mp4" poster="media/static_000365_29.jpg" width="1288" height="968" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_000365, static camera: the target is fully hidden on 183 of its 222 frames"></video><span class="lab" style="left:calc(0.000% + 8px);top:calc(0.000% + 8px)">SlotContrast</span><span class="lab" style="left:calc(50.311% + 8px);top:calc(0.000% + 8px)">RandSF.Q</span><span class="lab" style="left:calc(0.000% + 8px);top:calc(50.413% + 8px)">Loci-Looped</span><span class="lab ours" style="left:calc(50.311% + 8px);top:calc(50.413% + 8px)">iSEE (ours)</span></div><div class="tl" aria-hidden="true"><i style="left:6.306%;width:82.432%"></i><b class="ph"></b></div></figure><figure class="clip quad" data-n="160" data-fps="24" data-tab="Moving camera"><div class="frame"><video src="media/moving_001498_101.mp4" poster="media/moving_001498_101.jpg" width="1288" height="968" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_001498, moving camera: the target is fully hidden on 122 of its 160 frames"></video><span class="lab" style="left:calc(0.000% + 8px);top:calc(0.000% + 8px)">SlotContrast</span><span class="lab" style="left:calc(50.311% + 8px);top:calc(0.000% + 8px)">RandSF.Q</span><span class="lab" style="left:calc(0.000% + 8px);top:calc(50.413% + 8px)">Loci-Looped</span><span class="lab ours" style="left:calc(50.311% + 8px);top:calc(50.413% + 8px)">iSEE (ours)</span></div><div class="tl" aria-hidden="true"><i style="left:8.125%;width:76.250%"></i><b class="ph"></b></div></figure></div></div>
+  <h3>KITTI, real driving video</h3>
+  <figure class="fig"><img class="" src="img/kitti.webp" width="2200" height="815" alt="A KITTI car passes behind another road user and reappears: SlotContrast and iSEE slots over ten frames, with each model&#x27;s evidence below" loading="lazy" decoding="async">
+  <figcaption class="caption">A car passes behind another road user and reappears. White: the car's visible mask.
+  Green: the slot on the car before the occlusion; cross: the walker's predicted centre while the car is hidden.
+  Below, each model's evidence for that slot relative to its own past, ê: both fall while the car is hidden;
+  only iSEE's recovers, and its slot returns. Over the KITTI occlusions of cars (0.1–2.2 s), iSEE returns the car to
+  its slot after 48.4 % of occlusions, SlotContrast after 29.0 % (SAME&nbsp;↑).
+  </figcaption></figure>
+</section>
+
+<section id="results">
+  <h2>Results</h2>
+  <div class="tablewrap"><table>
+<thead><tr><th rowspan="2">method</th><th colspan="3" class="grp">static camera</th><th colspan="3" class="grp">moving camera</th></tr>
+<tr><th>occluded ↑</th><th>contained ↑</th><th>carried ↑</th><th>occluded ↑</th><th>contained ↑</th><th>carried ↑</th></tr></thead>
+<tbody class="g">
+<tr class="priv"><td>RAM (vis., bbox, id)</td><td>73.8</td><td>86.7</td><td>81.0</td><td>83.2</td><td>87.4</td><td>81.1</td></tr>
+<tr class=""><td>Loci-Looped (bg)</td><td>56.6</td><td>49.9</td><td>32.9</td><td>49.5</td><td>51.8</td><td>37.9</td></tr>
+<tr class=""><td>frozen</td><td>57.8</td><td>56.8</td><td>41.9</td><td>51.4</td><td>32.2</td><td>13.6</td></tr>
+</tbody>
+<tbody class="g">
+<tr class=""><td>SlotContrast</td><td>8.6</td><td>4.3</td><td>3.5</td><td>3.1</td><td>1.3</td><td>1.2</td></tr>
+<tr class=""><td>RandSF.Q</td><td>11.5</td><td>6.4</td><td>5.4</td><td>1.3</td><td>1.2</td><td>1.0</td></tr>
+<tr class="ours"><td>iSEE</td><td><b>80.5</b></td><td><b>84.2</b></td><td><b>78.7</b></td><td><b>54.4</b></td><td><b>51.6</b></td><td><b>46.3</b></td></tr>
+</tbody>
+</table></div>
+  <p class="caption"><b>Position of the target while it is hidden, LA-CATER</b> (Table 1 of the paper).
+  mAP@[0.1,0.3]&nbsp;↑ (×100): the share of an occlusion's hidden frames on which the model's box overlaps
+  the target's amodal box above an IoU threshold, averaged over the thresholds 0.10 to 0.30 and over the 195
+  (static camera) and 388 (moving camera) occlusions; the columns split the hidden frames by their LA-CATER label. A
+  slot model's box keeps the size of its mask before the occlusion and is centred on the predicted position. In
+  parentheses, what a row is given beyond the video: RAM (grey) is trained with visibility labels, boxes and track
+  identities; Loci-Looped reads a per-frame background image (bg). <i>frozen</i> holds iSEE's slot at its last
+  visible position. Bold: the best row that reads the video alone.</p>
+</section>
+
+<section id="failures">
+  <details>
+    <summary>Failure cases <span class="count">(8)</span></summary>
+    <div class="inner">
+      <p class="note">One median case per failure mode, and the re-identification failures with the largest
+      displacement.</p>
+      <div class="grid"><figure class="clip" data-n="126" data-fps="24"><div class="frame"><video src="media/moving_010760_76.mp4" poster="media/moving_010760_76.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_010760, moving camera: the target is fully hidden on 83 of its 126 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:12.698%;width:65.873%"></i><b class="ph"></b></div><figcaption>Prediction wanders off <span class="dur">· hidden 3.5 s</span></figcaption></figure><figure class="clip" data-n="125" data-fps="24"><div class="frame"><video src="media/moving_009860_168.mp4" poster="media/moving_009860_168.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_009860, moving camera: the target is fully hidden on 88 of its 125 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:0.000%;width:2.400%"></i><i style="left:10.400%;width:68.000%"></i><b class="ph"></b></div><figcaption>Prediction follows another object <span class="dur">· hidden 3.7 s</span></figcaption></figure><figure class="clip" data-n="121" data-fps="24"><div class="frame"><video src="media/moving_001699_61.mp4" poster="media/moving_001699_61.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_001699, moving camera: the target is fully hidden on 82 of its 121 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:10.744%;width:67.769%"></i><b class="ph"></b></div><figcaption>Slot is not on the object going in <span class="dur">· hidden 3.4 s</span></figcaption></figure><figure class="clip" data-n="113" data-fps="24"><div class="frame"><video src="media/moving_001204_26.mp4" poster="media/moving_001204_26.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_001204, moving camera: the target is fully hidden on 72 of its 113 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:12.389%;width:63.717%"></i><b class="ph"></b></div><figcaption>Box too small to overlap <span class="dur">· hidden 3.0 s</span></figcaption></figure><figure class="clip" data-n="152" data-fps="24"><div class="frame"><video src="media/moving_009803_139.mp4" poster="media/moving_009803_139.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_009803, moving camera: the target is fully hidden on 112 of its 152 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:9.211%;width:73.684%"></i><b class="ph"></b></div><figcaption>Slot does not return <span class="dur">· hidden 4.7 s</span></figcaption></figure><figure class="clip" data-n="198" data-fps="24"><div class="frame"><video src="media/static_002011_116.mp4" poster="media/static_002011_116.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_002011, static camera: the target is fully hidden on 158 of its 198 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:7.071%;width:79.798%"></i><b class="ph"></b></div><figcaption>Prediction leaves the cone <span class="dur">· hidden 6.6 s</span></figcaption></figure><figure class="clip" data-n="214" data-fps="24"><div class="frame"><video src="media/static_001718_67.mp4" poster="media/static_001718_67.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_001718, static camera: the target is fully hidden on 173 of its 214 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:6.542%;width:80.841%"></i><b class="ph"></b></div><figcaption>Prediction follows the wrong cone <span class="dur">· hidden 7.2 s</span></figcaption></figure><figure class="clip" data-n="91" data-fps="24"><div class="frame"><video src="media/static_001648_66.mp4" poster="media/static_001648_66.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LA-CATER clip CLEVR_new_001648, static camera: the target is fully hidden on 51 of its 91 frames"></video></div><div class="tl" aria-hidden="true"><i style="left:15.385%;width:56.044%"></i><b class="ph"></b></div><figcaption>Slot does not return <span class="dur">· hidden 2.1 s</span></figcaption></figure></div>
+    </div>
+  </details>
+</section>
+
+<section id="bibtex">
+  <h2>BibTeX</h2>
+  <div class="bib"><pre id="bibtex">@article{paudel2026isee,
+  title   = {{iSEE}: Object Permanence through Self-Supervision},
+  author  = {Paudel, Pramish and Chhatkuli, Ajad and Van Gool, Luc and Paudel, Danda Pani},
+  journal = {arXiv preprint},
+  year    = {2026}
+}</pre><button type="button" id="copy-bib">Copy</button></div>
+</section>
+
+<footer>Last updated 2026-10-01.</footer>
+</div>
+</body>
+</html>
