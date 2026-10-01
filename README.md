@@ -2,18 +2,29 @@
 
 [Project page](https://insait-institute.github.io/iSEE/)
 
-iSEE learns object-centric video representations without labels in which an object keeps its slot, and its slot keeps
-moving with it, while the object is hidden. Its three parts:
+<p align="center">
+  <img src="assets/teaser.gif" width="480" alt="iSEE on a LA-CATER clip: the target is covered by nested cones and carried while hidden">
+</p>
+<p align="center"><em>iSEE on LA-CATER: the target (white) is covered by nested cones and carried, out of sight for
+7.0 s. Green: iSEE's estimate of the target, dashed while it is hidden.</em></p>
 
-- **Encoder.** Recurrent slot attention on frozen DINOv2 (NoPE) features. Each slot has two streams, appearance *a*
-  (60 dims) and position *p* (4 dims), and is trained by reconstructing the backbone features, plus a slot-to-slot
-  contrastive loss on the appearance stream.
-- **TEN (temporal evidence normalisation).** It holds a slot when the evidence for its object disappears: a held slot
-  keeps its appearance, is not reassigned and is released when its object's evidence returns. TEN has no trained
-  parameters.
-- **Walker.** For every held slot, it propagates the slot's position over the patch grid, frame by frame, by learned
-  transitions between the encoder's patch features. The walked position is written into the held slot before the
-  predictor builds the next frame's slots.
+## Abstract
+
+Object permanence, keeping track of an object's identity and position while it is occluded, is central to video
+representations that track, predict and plan. Trackers that achieve it learn from boxes, track identities and
+visibility labels. On the other hand, self-supervised object-centric methods discover objects without labels: through
+slot attention, it represents a video as slots that bind to objects and follow them across frames. However, these
+slots are lost under occlusion, making the desired permanence impossible. Reasoning permanence is a hard problem
+because it requires to detect when an object becomes occluded, re-identify when object reappears, and keep the
+object's hidden position continuous, using reappearance as the only learning cue. To address this, we propose iSEE, a
+novel framework that offers all three aforementioned requirements, without any labels whatsoever. We built iSEE using
+the following three proposed components: (i) Object evidence modelling: a slot's attention, compared with its own
+past, reveals when its object is hidden. (ii) Appearance-position separation: two slot streams let the appearance be
+held for re-identification while the position keeps changing. (iii) Permanence from reappearance: a walker follows the
+hidden object's position, trained only on where the object reappears. On LA-CATER static, iSEE returns a reappearing
+object to its own slot after 86 % of occlusions, against 32 % for SlotContrast, and localises it while hidden within
+4.1 mAP of the label-trained SoTA RAM. The two streams also allow downstream planning, with the position stream as the
+action of a world model.
 
 This repository contains the model, the training code for the encoder and the walker, the evaluation on LA-CATER
 (static and moving camera) and MOVi-C, and the trained checkpoints.
@@ -170,6 +181,7 @@ evaluate retrained models, point the config's `checkpoint` and `walker.checkpoin
 ## Repository structure
 
 ```
+assets/                      the teaser
 configs/                     one config per dataset: model, TEN, walker, training and evaluation settings
   lacater_static.yaml  lacater_moving.yaml  movi_c.yaml
 checkpoints/                 the trained encoders and walkers (see Checkpoints)
@@ -207,6 +219,12 @@ scripts/
   year    = {2026}
 }
 ```
+
+## Acknowledgements
+
+iSEE builds on [SlotContrast](https://github.com/martius-lab/slotcontrast) (Manasyan et al., CVPR 2025): the learned
+slot initialisation, the feature MLP, the slot-attention update, the predictor's transformer block and the slot-slot
+contrastive loss follow its implementation. We thank its authors for releasing their code.
 
 ## License
 
